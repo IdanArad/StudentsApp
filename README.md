@@ -1,2 +1,2 @@
 # StudentsApp
-This is a Students App
+An app to manage a list of students
