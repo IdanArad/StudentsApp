@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.example.assignment4studentsapp.model.Model;
+import com.example.assignment4studentsapp.model.StudentList;
 import com.example.assignment4studentsapp.model.Student;
 
 public class EditStudentFragment extends Fragment {
@@ -36,7 +36,7 @@ public class EditStudentFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_edit_student, container, false);
 
         int position = EditStudentFragmentArgs.fromBundle(getArguments()).getPosition();
-        Student student = Model.instance.getStudent(position);
+        Student student = StudentList.instance.getStudent(position);
 
         etName = view.findViewById(R.id.edit_student_name_et);
         etId = view.findViewById(R.id.edit_student_id_et);
@@ -62,7 +62,7 @@ public class EditStudentFragment extends Fragment {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Model.instance.removeStudent(position);
+                StudentList.instance.removeStudent(position);
                 Navigation.findNavController(view).popBackStack(R.id.nav_students_list, false);
             }
         });

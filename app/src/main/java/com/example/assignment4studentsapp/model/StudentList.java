@@ -3,10 +3,10 @@ package com.example.assignment4studentsapp.model;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Model {
-    public static final Model instance = new Model();
+public class StudentList {
+    public static final StudentList instance = new StudentList();
 
-    private Model() {
+    private StudentList() {
         for (int i = 0; i < 20; i++) {
             Student s = new Student("name " + i, "id " +     i, "" + i, "21 street " + i, false);
             data.add(s);

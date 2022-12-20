@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.example.assignment4studentsapp.model.Model;
+import com.example.assignment4studentsapp.model.StudentList;
 import com.example.assignment4studentsapp.model.Student;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -36,7 +36,7 @@ public class StudentsListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_students_list, container, false);
 
-        data = Model.instance.getAllStudents();
+        data = StudentList.instance.getAllStudents();
 
         RecyclerView list = view.findViewById(R.id.students_list_rv);
         list.setHasFixedSize(true);

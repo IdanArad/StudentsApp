@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.example.assignment4studentsapp.model.Model;
+import com.example.assignment4studentsapp.model.StudentList;
 import com.example.assignment4studentsapp.model.Student;
 
 public class NewStudentFragment extends Fragment {
@@ -53,7 +53,7 @@ public class NewStudentFragment extends Fragment {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Model.instance.addStudent(new Student(
+                StudentList.instance.addStudent(new Student(
                         etName.getText().toString(),
                         etId.getText().toString(),
                         etPhone.getText().toString(),

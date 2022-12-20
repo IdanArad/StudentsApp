@@ -1,6 +1,5 @@
 package com.example.assignment4studentsapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.example.assignment4studentsapp.model.Model;
+import com.example.assignment4studentsapp.model.StudentList;
 import com.example.assignment4studentsapp.model.Student;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -40,7 +39,7 @@ public class StudentDetailsFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_student_details, container, false);
 
         int position = StudentDetailsFragmentArgs.fromBundle(getArguments()).getPosition();
-        student = Model.instance.getStudent(position);
+        student = StudentList.instance.getStudent(position);
 
         tvName = view.findViewById(R.id.student_details_name_tv);
         tvId = view.findViewById(R.id.student_details_id_tv);
