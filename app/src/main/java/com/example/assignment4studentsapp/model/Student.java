@@ -1,13 +1,18 @@
 package com.example.assignment4studentsapp.model;
 
 public class Student {
-    String name = "";
-    String id = "";
-    String phone = "";
-    String address = "";
-    boolean isChecked = false;
+    String name;
+    String id;
+    String phone;
+    String address;
+    boolean isChecked;
 
     public Student() {
+        this.name = "";
+        this.id = "";
+        this.phone = "";
+        this.address = "";
+        this.isChecked = false;
     }
 
     public Student(String name, String id, String phone, String address, boolean checked) {
